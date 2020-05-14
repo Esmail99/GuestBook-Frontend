@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GuestBook-Frontend/static/css/main.5f361e03.chunk.css",
-    "main.js": "/GuestBook-Frontend/static/js/main.2e16e360.chunk.js",
-    "main.js.map": "/GuestBook-Frontend/static/js/main.2e16e360.chunk.js.map",
+    "main.js": "/GuestBook-Frontend/static/js/main.b5c54577.chunk.js",
+    "main.js.map": "/GuestBook-Frontend/static/js/main.b5c54577.chunk.js.map",
     "runtime-main.js": "/GuestBook-Frontend/static/js/runtime-main.6e6a50a1.js",
     "runtime-main.js.map": "/GuestBook-Frontend/static/js/runtime-main.6e6a50a1.js.map",
     "static/css/2.3c03f26f.chunk.css": "/GuestBook-Frontend/static/css/2.3c03f26f.chunk.css",
     "static/js/2.dacd70bc.chunk.js": "/GuestBook-Frontend/static/js/2.dacd70bc.chunk.js",
     "static/js/2.dacd70bc.chunk.js.map": "/GuestBook-Frontend/static/js/2.dacd70bc.chunk.js.map",
     "index.html": "/GuestBook-Frontend/index.html",
-    "precache-manifest.56ede627a56046ba1a50c3244c1ea57b.js": "/GuestBook-Frontend/precache-manifest.56ede627a56046ba1a50c3244c1ea57b.js",
+    "precache-manifest.5c47b418d1113409ffbf89641a8f73ff.js": "/GuestBook-Frontend/precache-manifest.5c47b418d1113409ffbf89641a8f73ff.js",
     "service-worker.js": "/GuestBook-Frontend/service-worker.js",
     "static/css/2.3c03f26f.chunk.css.map": "/GuestBook-Frontend/static/css/2.3c03f26f.chunk.css.map",
     "static/css/main.5f361e03.chunk.css.map": "/GuestBook-Frontend/static/css/main.5f361e03.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.3c03f26f.chunk.css",
     "static/js/2.dacd70bc.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.2e16e360.chunk.js"
+    "static/js/main.b5c54577.chunk.js"
   ]
 }
