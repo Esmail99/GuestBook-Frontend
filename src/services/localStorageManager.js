@@ -4,7 +4,11 @@ export const setStorage = ({ key, data }) => {
 
 export const getStorage = (key) => {
   const data = localStorage.getItem(localStorage.key(key));
-  return JSON.parse(data);
+  if (data) {
+    return JSON.parse(data);
+  } else {
+    return undefined;
+  }
 };
 
 export const clearStorage = (key) => {
