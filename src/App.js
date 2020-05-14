@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import NavBar from "./components/NavBar";
 import Register from "./components/Register";
 import Login from "./components/Login";
 
@@ -23,12 +24,12 @@ class App extends Component {
     const { route } = this.state;
     return (
       <>
+        <NavBar changeRoute={this.changeRoute} />
         {route === "login" ? (
           <Login changeRoute={this.changeRoute} />
         ) : route === "register" ? (
           <Register changeRoute={this.changeRoute} />
         ) : null}
-        {/* <NavBar /> */}
         {/* <Home /> */}
       </>
     );
