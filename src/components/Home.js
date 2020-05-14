@@ -13,7 +13,7 @@ class Home extends React.Component {
         <Message
           message={{
             _id: {
-              $oid: "5ebca7b9c4c4c70017d8bf71",
+              $oid: "5ebca7b9c4c4c70017d8bf70",
             },
             username: "esmail",
             content: "bengoooooooo",
@@ -30,7 +30,7 @@ class Home extends React.Component {
               },
               {
                 _id: {
-                  $oid: "5ebc14075afcd42e68df2f81",
+                  $oid: "5ebc14075afcd42e68df2f81sd",
                 },
                 owner: "Esmail",
                 content: "blablabala",
