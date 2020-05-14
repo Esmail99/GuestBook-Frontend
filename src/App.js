@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import Home from "./components/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
 
@@ -29,8 +30,9 @@ class App extends Component {
           <Login changeRoute={this.changeRoute} />
         ) : route === "register" ? (
           <Register changeRoute={this.changeRoute} />
-        ) : null}
-        {/* <Home /> */}
+        ) : (
+          <Home />
+        )}
       </>
     );
   }

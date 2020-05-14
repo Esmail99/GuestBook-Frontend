@@ -14,8 +14,10 @@ class Login extends React.Component {
   };
 
   onFormSubmit = (event) => {
+    const { changeRoute } = this.props;
+
     event.preventDefault();
-    console.log(this.state);
+    changeRoute("home");
   };
 
   render() {
@@ -32,9 +34,9 @@ class Login extends React.Component {
                 className="pa2 input-reset ba bg-transparent w-70"
                 type="name"
                 name="username"
-                minLength="3"
-                maxLength="15"
-                required
+                // minLength="3"
+                // maxLength="15"
+                // required
               />
             </div>
             <div className="mv3">
@@ -44,8 +46,8 @@ class Login extends React.Component {
                 className="pa2 input-reset ba bg-transparent w-75"
                 type="password"
                 name="password"
-                minLength="1"
-                required
+                // minLength="6"
+                // required
               />
             </div>
           </fieldset>
