@@ -1,6 +1,39 @@
 import React from "react";
+import postService from "../services/postServices";
 
 class WriteMessage extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      messageContent: "",
+    };
+  }
+
+  onTextareaChange = (event) => {
+    this.setState({ messageContent: event.target.value });
+  };
+
+  clearInput = () => {
+    document.getElementById("writeMessage").value = "";
+  };
+
+  onFormSubmit = (event) => {
+    const { messageContent } = this.state;
+    const { componentDidMount } = this.props;
+
+    event.preventDefault();
+    const requestData = {
+      content: messageContent,
+    };
+    postService("/api/messages/add", requestData)
+      .then(() => {
+        this.setState({ messageContent: "" });
+        this.clearInput();
+        componentDidMount();
+      })
+      .catch((err) => console.log("err:", err));
+  };
+
   render() {
     return (
       <div className="pt2">
@@ -16,7 +49,7 @@ class WriteMessage extends React.Component {
                 placeholder="Add a Message .."
                 type="text"
                 name="addMessage"
-                id="textarea"
+                id="writeMessage"
                 style={{ resize: "none" }}
                 required
               />

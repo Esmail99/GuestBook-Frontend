@@ -28,7 +28,7 @@ class Home extends React.Component {
     return (
       <main className="tc mw7 center avenir">
         <section className="ma4">
-          <WriteMessage />
+          <WriteMessage componentDidMount={this.componentDidMount} />
           {!messages.length ? (
             <h1>Loading...</h1>
           ) : (
