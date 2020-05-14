@@ -6,9 +6,8 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 
 const initialState = {
-  route: "login",
+  route: "home",
   isSignedin: false,
-  userInfo: {},
 };
 
 class App extends Component {
