@@ -1,4 +1,5 @@
 import React from "react";
+import WriteMessage from "./WriteMessage";
 import Message from "./Message";
 
 class Home extends React.Component {
@@ -9,43 +10,45 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="tc f3 mh4">
-        <Message
-          message={{
-            _id: {
-              $oid: "5ebca7b9c4c4c70017d8bf70",
-            },
-            username: "esmail",
-            content: "bengoooooooo",
-            comments: [
-              {
-                _id: {
-                  $oid: "5ebc14075afcd42e68df2f80",
-                },
-                owner: "Esmail",
-                content: "hahaha",
-                date: {
-                  $date: "2020-05-13T15:36:39.878Z",
-                },
+      <main className="tc mw7 center avenir">
+        <section className="ma4">
+          <WriteMessage />
+          <Message
+            message={{
+              _id: {
+                $oid: "5ebca7b9c4c4c70017d8bf70",
               },
-              {
-                _id: {
-                  $oid: "5ebc14075afcd42e68df2f81sd",
+              username: "esmail",
+              content: "bengoooooooo",
+              comments: [
+                {
+                  _id: {
+                    $oid: "5ebc14075afcd42e68df2f80",
+                  },
+                  owner: "Esmail",
+                  content: "hahaha",
+                  date: {
+                    $date: "2020-05-13T15:36:39.878Z",
+                  },
                 },
-                owner: "Esmail",
-                content: "blablabala",
-                date: {
-                  $date: "2020-05-13T15:36:39.878Z",
+                {
+                  _id: {
+                    $oid: "5ebc14075afcd42e68df2f81sd",
+                  },
+                  owner: "Esmail",
+                  content: "blablabala",
+                  date: {
+                    $date: "2020-05-13T15:36:39.878Z",
+                  },
                 },
+              ],
+              date: {
+                $date: "2020-05-14T02:06:49.107Z",
               },
-            ],
-            date: {
-              $date: "2020-05-14T02:06:49.107Z",
-            },
-            __v: 0,
-          }}
-        />
-        {/* <Message
+              __v: 0,
+            }}
+          />
+          {/* <Message
           message={{
             _id: {
               $oid: "5ebca7b9c4c4c70017d8bf71",
@@ -73,7 +76,8 @@ class Home extends React.Component {
             __v: 0,
           }}
         /> */}
-      </div>
+        </section>
+      </main>
     );
   }
 }
