@@ -5,6 +5,7 @@ import WriteComment from "./WriteComment.js";
 class Message extends React.Component {
   render() {
     const { username, content, comments, _id } = this.props.message;
+    const { reloadHome } = this.props;
     return (
       <article className="w-100 center bg-white br4 pa3 pa3-ns mv3 ba b--black-40 pb0 pb0-ns">
         <div className="tc">
@@ -13,7 +14,7 @@ class Message extends React.Component {
         </div>
         <p className="lh-copy measure center f3 black-70">{content}</p>
         <hr className="bb bw1 b--black-10" />
-        <WriteComment _id={_id} />
+        <WriteComment _id={_id} reloadHome={reloadHome} />
         {comments.map((comment, index) => {
           return (
             <div key={index}>

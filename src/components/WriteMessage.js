@@ -19,7 +19,7 @@ class WriteMessage extends React.Component {
 
   onFormSubmit = (event) => {
     const { messageContent } = this.state;
-    const { componentDidMount } = this.props;
+    const { reloadHome } = this.props;
 
     event.preventDefault();
     const requestData = {
@@ -29,7 +29,7 @@ class WriteMessage extends React.Component {
       .then(() => {
         this.setState({ messageContent: "" });
         this.clearInput();
-        componentDidMount();
+        reloadHome();
       })
       .catch((err) => console.log("err:", err));
   };

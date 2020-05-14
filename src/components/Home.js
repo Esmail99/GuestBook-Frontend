@@ -28,14 +28,17 @@ class Home extends React.Component {
     return (
       <main className="tc mw7 center avenir">
         <section className="ma4">
-          <WriteMessage componentDidMount={this.componentDidMount} />
+          <WriteMessage reloadHome={this.componentDidMount} />
           {!messages.length ? (
             <h1>Loading...</h1>
           ) : (
             messages.map((message, index) => {
               return (
                 <div key={index}>
-                  <Message message={message} />
+                  <Message
+                    message={message}
+                    reloadHome={this.componentDidMount}
+                  />
                 </div>
               );
             })
