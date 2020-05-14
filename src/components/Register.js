@@ -8,11 +8,45 @@ class Register extends React.Component {
       username: "",
       password: "",
       confirmPassword: "",
+      errorMessage: "",
     };
   }
 
+  validateUser = () => {
+    const { password, confirmPassword, username } = this.state;
+
+    if (!username) {
+      this.setState({
+        errorMessage: "Username is required!",
+      });
+      return false;
+    }
+    if (!password) {
+      this.setState({
+        errorMessage: "Password is required!",
+      });
+      return false;
+    }
+    if (password.length < 6) {
+      this.setState({
+        errorMessage: "Password length must be 6 or more!",
+      });
+      return false;
+    }
+    if (password !== confirmPassword) {
+      this.setState({
+        errorMessage: "Password confirmation doesn't match password",
+      });
+      return false;
+    }
+    return true;
+  };
+
   onInputChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({
+      [event.target.name]: event.target.value,
+      errorMessage: "",
+    });
   };
 
   onFormSubmit = (event) => {
@@ -20,21 +54,35 @@ class Register extends React.Component {
     const { username, password } = this.state;
     event.preventDefault();
 
-    registerService({ username, password })
-      .then((data) => {
-        console.log(data);
-        changeRoute("login");
-      })
-      .catch((err) => console.log(err));
+    const userValid = this.validateUser();
+    if (userValid) {
+      registerService({ username, password })
+        .then((res) => {
+          if (res.data._id) {
+            changeRoute("login");
+          }
+        })
+        .catch((err) => {
+          if (err.response) {
+            this.setState({ errorMessage: err.response.data });
+          } else {
+            this.setState({
+              errorMessage: "an error occurred please try again later",
+            });
+          }
+        });
+    }
   };
 
   render() {
     const { changeRoute } = this.props;
+    const { errorMessage } = this.state;
     return (
       <main className="pa4 black-80">
         <form className="measure center" onSubmit={this.onFormSubmit}>
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
             <legend className="f3 fw6 ph0 mh0">Register</legend>
+            <span className="red">{errorMessage}</span>
             <div className="mt3">
               <label className="db fw6 lh-copy f6">Username</label>
               <input
@@ -42,9 +90,6 @@ class Register extends React.Component {
                 className="pa2 input-reset ba bg-transparent w-70"
                 type="name"
                 name="username"
-                // minLength="3"
-                // maxLength="15"
-                // required
               />
             </div>
             <div className="mv3">
@@ -54,8 +99,6 @@ class Register extends React.Component {
                 className="pa2 input-reset ba bg-transparent w-75"
                 type="password"
                 name="password"
-                // minLength="6"
-                // required
               />
             </div>
             <div className="mv3">
@@ -65,8 +108,6 @@ class Register extends React.Component {
                 className="pa2 input-reset ba bg-transparent w-75"
                 type="password"
                 name="confirmPassword"
-                // minLength="6"
-                // required
               />
             </div>
           </fieldset>
