@@ -1,5 +1,6 @@
 import React from "react";
 import { loginUser } from "../services/registerService";
+import { setStorage } from "../services/localStorageManager";
 
 class Login extends React.Component {
   constructor(props) {
@@ -52,6 +53,10 @@ class Login extends React.Component {
       loginUser({ username, password })
         .then((res) => {
           if (res.data.auth) {
+            setStorage({
+              key: "userInfo",
+              data: res.data,
+            });
             changeRoute("home");
           }
         })
