@@ -19,6 +19,7 @@ class Login extends React.Component {
   };
 
   render() {
+    const { changeRoute } = this.props;
     return (
       <main className="pa4 black-80">
         <form className="measure center" onSubmit={this.onFormSubmit}>
@@ -57,7 +58,10 @@ class Login extends React.Component {
           </div>
           <div className="lh-copy mt3">
             Dont have an accout yet?
-            <span className="f6 link blue dim underline pointer ml1">
+            <span
+              className="f6 link blue dim underline pointer ml1"
+              onClick={() => changeRoute("register")}
+            >
               Register
             </span>
           </div>

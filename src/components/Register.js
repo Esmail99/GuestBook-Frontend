@@ -19,11 +19,12 @@ class Register extends React.Component {
   };
 
   render() {
+    const { changeRoute } = this.props;
     return (
       <main className="pa4 black-80">
         <form className="measure center" onSubmit={this.onFormSubmit}>
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-            <legend className="f4 fw6 ph0 mh0">Register</legend>
+            <legend className="f3 fw6 ph0 mh0">Register</legend>
             <div className="mt3">
               <label className="db fw6 lh-copy f6">Username</label>
               <input
@@ -57,8 +58,11 @@ class Register extends React.Component {
           </div>
           <div className="lh-copy mt3">
             Already have an accout?
-            <span className="f6 link blue dim underline pointer ml1">
-              Signin
+            <span
+              className="f6 link blue dim underline pointer ml1"
+              onClick={() => changeRoute("login")}
+            >
+              Login
             </span>
           </div>
         </form>
