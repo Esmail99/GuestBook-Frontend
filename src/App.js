@@ -30,7 +30,7 @@ class App extends Component {
         ) : route === "register" ? (
           <Register changeRoute={this.changeRoute} />
         ) : (
-          <Home />
+          <Home changeRoute={this.changeRoute} />
         )}
       </>
     );

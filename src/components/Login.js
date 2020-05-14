@@ -1,5 +1,5 @@
 import React from "react";
-import { loginUser } from "../services/registerService";
+import { loginUser } from "../services/userServices";
 import { setStorage } from "../services/localStorageManager";
 
 class Login extends React.Component {
