@@ -1,4 +1,5 @@
 import React from "react";
+import registerService from "../services/registerService";
 
 class Register extends React.Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class Register extends React.Component {
     this.state = {
       username: "",
       password: "",
+      confirmPassword: "",
     };
   }
 
@@ -15,9 +17,15 @@ class Register extends React.Component {
 
   onFormSubmit = (event) => {
     const { changeRoute } = this.props;
-
+    const { username, password } = this.state;
     event.preventDefault();
-    changeRoute("home");
+
+    registerService({ username, password })
+      .then((data) => {
+        console.log(data);
+        changeRoute("login");
+      })
+      .catch((err) => console.log(err));
   };
 
   render() {
@@ -46,6 +54,17 @@ class Register extends React.Component {
                 className="pa2 input-reset ba bg-transparent w-75"
                 type="password"
                 name="password"
+                // minLength="6"
+                // required
+              />
+            </div>
+            <div className="mv3">
+              <label className="db fw6 lh-copy f6">Confirm Password</label>
+              <input
+                onChange={this.onInputChange}
+                className="pa2 input-reset ba bg-transparent w-75"
+                type="password"
+                name="confirmPassword"
                 // minLength="6"
                 // required
               />

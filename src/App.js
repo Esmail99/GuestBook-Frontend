@@ -6,7 +6,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 
 const initialState = {
-  route: "login",
+  route: "register",
   isSignedin: false,
   userInfo: {},
 };
