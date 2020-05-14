@@ -3,11 +3,11 @@ export const setStorage = ({ key, data }) => {
 };
 
 export const getStorage = (key) => {
-  const data = localStorage.getItem(localStorage.key(key));
-  if (data) {
+  try {
+    const data = localStorage.getItem(localStorage.key(key));
     return JSON.parse(data);
-  } else {
-    return undefined;
+  } catch (err) {
+    console.log(err);
   }
 };
 
