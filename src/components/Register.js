@@ -1,5 +1,5 @@
 import React from "react";
-import registerService from "../services/registerService";
+import { registerUser } from "../services/registerService";
 
 class Register extends React.Component {
   constructor(props) {
@@ -56,18 +56,18 @@ class Register extends React.Component {
 
     const userValid = this.validateUser();
     if (userValid) {
-      registerService({ username, password })
+      registerUser({ username, password })
         .then((res) => {
           if (res.data._id) {
             changeRoute("login");
           }
         })
         .catch((err) => {
-          if (err.response) {
-            this.setState({ errorMessage: err.response.data });
+          if (err.response.data.msg) {
+            this.setState({ errorMessage: err.response.data.msg });
           } else {
             this.setState({
-              errorMessage: "an error occurred please try again later",
+              errorMessage: "an error occurred please try again later!",
             });
           }
         });
