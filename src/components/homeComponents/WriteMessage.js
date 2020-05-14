@@ -1,5 +1,5 @@
 import React from "react";
-import postService from "../services/postServices";
+import postService from "../../services/postServices";
 
 class WriteMessage extends React.Component {
   constructor() {

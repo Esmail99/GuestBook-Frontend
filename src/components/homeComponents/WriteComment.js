@@ -1,5 +1,5 @@
 import React from "react";
-import putService from "../services/putServices";
+import putService from "../../services/putServices";
 
 class WriteComment extends React.Component {
   constructor() {

@@ -3,7 +3,7 @@ import Comment from "./Comment.js";
 import WriteComment from "./WriteComment.js";
 import EditMessage from "./EditMessage";
 import DeleteMessage from "./DeleteMessage";
-import { getStorage } from "../services/localStorageManager.js";
+import { getStorage } from "../../services/localStorageManager.js";
 
 class Message extends React.Component {
   render() {

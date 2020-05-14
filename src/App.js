@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
+import Home from "./components/homeComponents/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import { getStorage } from "./services/localStorageManager";
