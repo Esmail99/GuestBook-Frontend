@@ -75,11 +75,12 @@ class Login extends React.Component {
   render() {
     const { changeRoute } = this.props;
     const { errorMessage } = this.state;
+
     return (
-      <main className="pa4 black-80">
+      <main className="pa4 black-80 mt5">
         <form className="measure center" onSubmit={this.onFormSubmit}>
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-            <legend className="f3 fw6 ph0 mh0">Login</legend>
+            <legend className="f2 fw6 ph0 mh0">Login</legend>
             <span className="red">{errorMessage}</span>
             <div className="mt3">
               <label className="db fw6 lh-copy f6">Username</label>
