@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19f36c7c254d38e85f59df047b4e31f6",
+    "revision": "71d24fd181868330b28c9f5e0576fedc",
     "url": "/GuestBook-Frontend/index.html"
   },
   {
-    "revision": "0c349e3003557f58cd69",
+    "revision": "3011611e7e0b546bb126",
     "url": "/GuestBook-Frontend/static/css/2.9cf89ac8.chunk.css"
   },
   {
-    "revision": "8eb67bb6125b20171ee5",
-    "url": "/GuestBook-Frontend/static/css/main.5f361e03.chunk.css"
+    "revision": "aac9986033230640befa",
+    "url": "/GuestBook-Frontend/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "0c349e3003557f58cd69",
-    "url": "/GuestBook-Frontend/static/js/2.210b0973.chunk.js"
+    "revision": "3011611e7e0b546bb126",
+    "url": "/GuestBook-Frontend/static/js/2.9005b238.chunk.js"
   },
   {
     "revision": "1baa02233bbd827e3584e32091a75902",
-    "url": "/GuestBook-Frontend/static/js/2.210b0973.chunk.js.LICENSE.txt"
+    "url": "/GuestBook-Frontend/static/js/2.9005b238.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8eb67bb6125b20171ee5",
-    "url": "/GuestBook-Frontend/static/js/main.2b4cf19a.chunk.js"
+    "revision": "aac9986033230640befa",
+    "url": "/GuestBook-Frontend/static/js/main.7afac89d.chunk.js"
   },
   {
     "revision": "0d083adb137af97774c7",
