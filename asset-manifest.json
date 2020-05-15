@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/GuestBook-Frontend/static/css/main.5f361e03.chunk.css",
-    "main.js": "/GuestBook-Frontend/static/js/main.b5c54577.chunk.js",
-    "main.js.map": "/GuestBook-Frontend/static/js/main.b5c54577.chunk.js.map",
+    "main.js": "/GuestBook-Frontend/static/js/main.7f33342e.chunk.js",
+    "main.js.map": "/GuestBook-Frontend/static/js/main.7f33342e.chunk.js.map",
     "runtime-main.js": "/GuestBook-Frontend/static/js/runtime-main.6e6a50a1.js",
     "runtime-main.js.map": "/GuestBook-Frontend/static/js/runtime-main.6e6a50a1.js.map",
-    "static/css/2.3c03f26f.chunk.css": "/GuestBook-Frontend/static/css/2.3c03f26f.chunk.css",
-    "static/js/2.dacd70bc.chunk.js": "/GuestBook-Frontend/static/js/2.dacd70bc.chunk.js",
-    "static/js/2.dacd70bc.chunk.js.map": "/GuestBook-Frontend/static/js/2.dacd70bc.chunk.js.map",
+    "static/css/2.9cf89ac8.chunk.css": "/GuestBook-Frontend/static/css/2.9cf89ac8.chunk.css",
+    "static/js/2.210b0973.chunk.js": "/GuestBook-Frontend/static/js/2.210b0973.chunk.js",
+    "static/js/2.210b0973.chunk.js.map": "/GuestBook-Frontend/static/js/2.210b0973.chunk.js.map",
     "index.html": "/GuestBook-Frontend/index.html",
-    "precache-manifest.5c47b418d1113409ffbf89641a8f73ff.js": "/GuestBook-Frontend/precache-manifest.5c47b418d1113409ffbf89641a8f73ff.js",
+    "precache-manifest.47039d6e0ee8818a9ac35d009871e53d.js": "/GuestBook-Frontend/precache-manifest.47039d6e0ee8818a9ac35d009871e53d.js",
     "service-worker.js": "/GuestBook-Frontend/service-worker.js",
-    "static/css/2.3c03f26f.chunk.css.map": "/GuestBook-Frontend/static/css/2.3c03f26f.chunk.css.map",
+    "static/css/2.9cf89ac8.chunk.css.map": "/GuestBook-Frontend/static/css/2.9cf89ac8.chunk.css.map",
     "static/css/main.5f361e03.chunk.css.map": "/GuestBook-Frontend/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.dacd70bc.chunk.js.LICENSE.txt": "/GuestBook-Frontend/static/js/2.dacd70bc.chunk.js.LICENSE.txt",
+    "static/js/2.210b0973.chunk.js.LICENSE.txt": "/GuestBook-Frontend/static/js/2.210b0973.chunk.js.LICENSE.txt",
     "static/media/delete.webp": "/GuestBook-Frontend/static/media/delete.f1782b1c.webp",
     "static/media/edit.png": "/GuestBook-Frontend/static/media/edit.fb6f5682.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6e6a50a1.js",
-    "static/css/2.3c03f26f.chunk.css",
-    "static/js/2.dacd70bc.chunk.js",
+    "static/css/2.9cf89ac8.chunk.css",
+    "static/js/2.210b0973.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.b5c54577.chunk.js"
+    "static/js/main.7f33342e.chunk.js"
   ]
 }
