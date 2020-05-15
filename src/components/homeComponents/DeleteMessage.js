@@ -1,5 +1,5 @@
 import React from "react";
-import deleteService from "../../services/deleteServices";
+import { deleteService } from "../../services/messageServices";
 
 class DeleteMessage extends React.Component {
   onDeleteClick = () => {

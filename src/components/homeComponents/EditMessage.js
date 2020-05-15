@@ -1,7 +1,6 @@
 import React from "react";
 import { PopupboxManager, PopupboxContainer } from "react-popupbox";
-import "react-popupbox/dist/react-popupbox.css";
-import putService from "../../services/putServices";
+import { putService } from "../../services/messageServices";
 
 class EditMessage extends React.Component {
   constructor(props) {

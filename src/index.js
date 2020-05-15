@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "tachyons";
+import "react-popupbox/dist/react-popupbox.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

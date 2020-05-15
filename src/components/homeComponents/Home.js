@@ -1,7 +1,7 @@
 import React from "react";
 import WriteMessage from "./WriteMessage";
 import Message from "./Message";
-import getService from "../../services/getServices";
+import { getService } from "../../services/messageServices";
 
 class Home extends React.Component {
   constructor(props) {
