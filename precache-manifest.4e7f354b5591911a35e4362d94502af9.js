@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a19ce987668489da9c1d1bf9265d2e88",
+    "revision": "19f36c7c254d38e85f59df047b4e31f6",
     "url": "/GuestBook-Frontend/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GuestBook-Frontend/static/css/2.9cf89ac8.chunk.css"
   },
   {
-    "revision": "0b28a177cf7af55cd622",
+    "revision": "8eb67bb6125b20171ee5",
     "url": "/GuestBook-Frontend/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GuestBook-Frontend/static/js/2.210b0973.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0b28a177cf7af55cd622",
-    "url": "/GuestBook-Frontend/static/js/main.7f33342e.chunk.js"
+    "revision": "8eb67bb6125b20171ee5",
+    "url": "/GuestBook-Frontend/static/js/main.2b4cf19a.chunk.js"
   },
   {
     "revision": "0d083adb137af97774c7",
