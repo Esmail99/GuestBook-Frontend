@@ -15,7 +15,7 @@ class Message extends React.Component {
         <div className="tc">
           {username === usernameLocalStorage ? (
             <section>
-              <EditMessage />
+              <EditMessage _id={_id} reloadHome={reloadHome} />
               <DeleteMessage />
             </section>
           ) : null}
