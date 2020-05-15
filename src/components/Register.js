@@ -1,5 +1,5 @@
 import React from "react";
-import { registerUser } from "../services/userServices";
+import registerUser from "../services/userServices";
 
 class Register extends React.Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class Register extends React.Component {
 
     const userValid = this.validateUser();
     if (userValid) {
-      registerUser({ username, password })
+      registerUser("/api/users/register", { username, password })
         .then((res) => {
           if (res.data._id) {
             changeRoute("login");

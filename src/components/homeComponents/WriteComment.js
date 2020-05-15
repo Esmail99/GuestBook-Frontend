@@ -12,7 +12,7 @@ class WriteComment extends React.Component {
   addComment = (e) => {
     e.preventDefault();
     const { commentContent } = this.state;
-    const { reloadHome } = this.props;
+    const { reloadHome, _id } = this.props;
 
     const requestData = {
       content: commentContent,
@@ -21,9 +21,9 @@ class WriteComment extends React.Component {
       .then(() => {
         reloadHome();
         this.setState({ commentContent: "" });
-        document.getElementById("commentContent").value = "";
+        document.getElementById(`comment${_id}`).value = "";
       })
-      .catch((err) => console.log(err));
+      .catch(console.log);
   };
 
   onCommentChange = (event) => {
@@ -43,7 +43,7 @@ class WriteComment extends React.Component {
             <textarea
               onChange={this.onCommentChange}
               className="f4 input-reset bn fl black-80 bg-white pt2 lh-solid w-60 w-60-m w-60-l br2-ns outline-0"
-              id="commentContent"
+              id={`comment${_id}`}
               placeholder="Write a comment.."
               type="text"
               name="message"

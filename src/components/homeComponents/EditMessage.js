@@ -25,7 +25,7 @@ class EditMessage extends React.Component {
           PopupboxManager.close();
           reloadHome();
         })
-        .catch((err) => console.log(err));
+        .catch(console.log);
     }
   };
 

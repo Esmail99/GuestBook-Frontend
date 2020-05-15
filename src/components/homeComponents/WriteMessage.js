@@ -31,7 +31,7 @@ class WriteMessage extends React.Component {
         this.clearInput();
         reloadHome();
       })
-      .catch((err) => console.log("err:", err));
+      .catch(console.log);
   };
 
   render() {

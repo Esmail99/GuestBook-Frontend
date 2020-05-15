@@ -1,5 +1,5 @@
 import React from "react";
-import { loginUser } from "../services/userServices";
+import loginUser from "../services/userServices";
 import { setStorage } from "../services/localStorageManager";
 
 class Login extends React.Component {
@@ -50,7 +50,7 @@ class Login extends React.Component {
 
     const userValid = this.validateUser();
     if (userValid) {
-      loginUser({ username, password })
+      loginUser("/api/users/login", { username, password })
         .then((res) => {
           if (res.data.auth) {
             setStorage({
