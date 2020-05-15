@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./components/homeComponents/Home";
 import Register from "./components/Register";
