@@ -16,7 +16,7 @@ class Message extends React.Component {
           {username === usernameLocalStorage ? (
             <section>
               <EditMessage _id={_id} reloadHome={reloadHome} />
-              <DeleteMessage />
+              <DeleteMessage _id={_id} reloadHome={reloadHome} />
             </section>
           ) : null}
           <p className="f3">{username}</p>
