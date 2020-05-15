@@ -9,7 +9,8 @@ class WriteComment extends React.Component {
     };
   }
 
-  onCommentClick = () => {
+  addComment = (e) => {
+    e.preventDefault();
     const { commentContent } = this.state;
     const { reloadHome } = this.props;
 
@@ -17,7 +18,7 @@ class WriteComment extends React.Component {
       content: commentContent,
     };
     putService(`/api/messages/comment/${this.props._id}`, requestData)
-      .then((data) => {
+      .then(() => {
         reloadHome();
         this.setState({ commentContent: "" });
         document.getElementById("commentContent").value = "";
@@ -32,9 +33,10 @@ class WriteComment extends React.Component {
   render() {
     const { _id } = this.props;
     return (
-      <div
+      <form
         className="bg-white mw6 center pa2 br4-ns ba b--white"
         id={`commentBlock${_id}`}
+        onSubmit={this.addComment}
       >
         <fieldset className="cf bn ma0 pa0">
           <div className="cf">
@@ -46,16 +48,16 @@ class WriteComment extends React.Component {
               type="text"
               name="message"
               style={{ resize: "none" }}
+              required
             />
             <input
-              onClick={this.onCommentClick}
               className="f6 f5-l button-reset fr pv3 tc bn bg-animate bg-blue grow white pointer w-30 w-20-m w-20-l br4-ns outline-0"
               type="submit"
               value="Comment"
             />
           </div>
         </fieldset>
-      </div>
+      </form>
     );
   }
 }
